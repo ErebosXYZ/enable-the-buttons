@@ -19,7 +19,22 @@
     </main>   
     <script>
         /* Buena suerte! Corregir 21.35 */
+        const agreement = document.querySelector("#agreement");
 
+        // Agreement és el selector
+        const continueBtn = document.querySelector(" #continueBtn1");
+        // Botó de continuar, s'activarà o es desactivarà en funció de l'opció d'agreement que seleccioni
+
+        agreement.addEventListener("change", (event) => {
+            const selected = event.target.value;
+            // selected és el valor que selecciono dins d'agreement quan es produeix l'event change
+
+            if (selected == "yes") {
+                continueBtn.disabled = false;
+            } else {
+                continueBtn.disabled = true;
+            }
+        });
     </script>
 </body>
 </html>
